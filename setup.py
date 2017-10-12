@@ -1,4 +1,5 @@
-from distutils.core import setup
+from setuptools import setup, find_packages
+
 
 with open('requirements.txt') as require_fp:
     requirements = require_fp.readlines()
@@ -13,7 +14,7 @@ with open('LICENSE.txt') as license_fp:
 setup(
     name='ExifReader',
     version='0.0.1',
-    packages=['exif_reader'],
+    packages=find_packages(),
     license=license,
     long_description=readme,
     install_requires=requirements,
